@@ -8,8 +8,10 @@ e.g maxRecurringChar('aabacada') // will return 'a'
 function maxRecurringChar(text) {
     // Code goes here
     let count = 0;
+    let char;
     for (let i = 0; i < text.length; i++) {
         let tempCount = 0;
+        char = text[i]
         for (let k = 0; k < text.length; k++){
             if (text[i] === text[k]){
                 tempCount++
@@ -17,7 +19,6 @@ function maxRecurringChar(text) {
         }
         if (tempCount > count){
             count = tempCount;
-            var char = text[i]
         }
     }
     return char; 
