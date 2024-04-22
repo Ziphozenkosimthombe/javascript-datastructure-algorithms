@@ -7,14 +7,14 @@ e.g palindromeChecker('racecar') // will return true
 
 
 function palindromeChecker(text) {
-   let reverseWords = text.split('').reverse().join('');
+   let reverseWords = text.toLoweCase().split('').reverse().join('');
    if(text === reverseWords){
        return true;
    }else{return false;}
 }
 
 function palindromeChecker(text){
-    return text === text.split('').reverse().join('');
+    return text === text.toLoweCase().split('').reverse().join('');
 }
 
 module.exports = palindromeChecker;
